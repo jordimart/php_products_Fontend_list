@@ -144,11 +144,22 @@ if ((isset($_GET["load_data"])) && ($_GET["load_data"] == true)) {
     if(  (isset($_GET["load_pais"])) && ($_GET["load_pais"] == true)  ){
         $json = array();
 
-        $url = 'http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso/ListOfCountryNamesByName/JSON';
-        $path_model=$_SERVER['DOCUMENT_ROOT'].'/modules/products/model/model/';
-        $json = loadModel($path_model, "product_model", "obtain_paises", $url);
+$url = 'http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso/ListOfCountryNamesByName/JSON';
+$exists = false;
+        function url_exists($url){
+          $file_headers = @get_headers($url);
+          if(strpos($file_headers[0],"200 OK")==false)
+          {
+          $exists = false;
+        } else{
+          $path_model=$_SERVER['DOCUMENT_ROOT'].'/modules/products/model/model/';
+          $json = loadModel($path_model, "product_model", "obtain_paises", $url);
+        $exists = true;
+        }
+        return $exists;
+    }
 
-        if($json){
+        if($exists){
             echo $json;
             exit;
         }else{
