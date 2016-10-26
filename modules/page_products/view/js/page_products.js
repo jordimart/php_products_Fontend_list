@@ -4,7 +4,8 @@ $(document).ready(function() {
     function(data, status) {
       var json = JSON.parse(data);
       var pages = json.pages;
-      console.log(pages);
+      //aqui obtengo el numero de paginas
+      //console.log(data);
 
       $("#results").load(
         "modules/page_products/controller/controller_page_products.class.php"
