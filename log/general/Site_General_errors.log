@@ -1,9 +1,6 @@
-27/10/16 12:31:12 AM | ERROR: [2] require_once(view/inc/404.php): failed to open stream: No such file or directory
-Warning on line 28 in file /var/www/php_products/utils/common.inc.php
- | page_products | response 200
-27/10/16 12:31:24 AM | ERROR: [2] require_once(view/inc/404.php): failed to open stream: No such file or directory
-Warning on line 28 in file /var/www/php_products/utils/common.inc.php
- | page_products | response 200
-27/10/16 12:38:59 AM | ERROR: [2] require_once(view/inc/404.php): failed to open stream: No such file or directory
-Warning on line 28 in file /var/www/php_products/utils/common.inc.php
- | page_products | response 200
+31/10/16 06:18:36 PM | error paint_template_error | page_products | response200
+31/10/16 06:19:52 PM | error paint_template_error | page_products | response200
+31/10/16 06:20:46 PM | error paint_template_error | page_products | response200
+31/10/16 06:21:17 PM | error paint_template_error | page_products | response200
+31/10/16 06:21:29 PM | error paint_template_error | page_products | response200
+31/10/16 06:23:44 PM | error paint_template_error | page_products | response200

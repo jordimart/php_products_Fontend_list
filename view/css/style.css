@@ -1917,7 +1917,7 @@ font-weight:bold;
 
 
 /*****************PRODUCTS****************/
-#prod {
+.prod {
     display:inline-block;
     margin: 8px;
     margin-bottom: 5px;
@@ -1926,7 +1926,7 @@ font-weight:bold;
     text-align: left;
 }
 
-#prod p {
+.prod p {
     display: inline-block;
     font-weight: bold;
     color:black;
@@ -1940,7 +1940,7 @@ font-weight:bold;
 }
 
 
-#prod:hover {
+.prod:hover {
     border:1px solid gray;
 }
 
@@ -1952,10 +1952,11 @@ font-weight:bold;
 
 #details {
     display: table;
-    width: 70%;
+    width: 100%;
     border:1px solid black;
     border-radius: 9px;
     background-color: #f5f1e6;
+    text-align: center;
 }
 
 
@@ -1980,4 +1981,40 @@ font-weight:bold;
 #details_prod ol li {
     font-size: 30pt;
     font-weight: bold;
+}
+
+/******************
+ 404 page css
+ ******************/
+
+#error .btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success:hover {
+    background-color: #EBEBEB;
+    border-color: #EBEBEB;
+    color: #4E4E4E;
+}
+
+#error h1{
+    color: #4e4e4e;
+    text-transform: uppercase;
+}
+
+
+/******************
+shortcodes page css
+******************/
+
+.shortcode-item {
+    padding-bottom: 0;
+}
+
+.shortcode-item h2 {
+    color: #4E4E4E;
+    font-size: 24px;
+    margin-bottom: 22px;
+    margin-top: 0;
+    font-weight: 600
 }

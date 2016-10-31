@@ -1,5 +1,6 @@
 <?php
 
+//errores que se devolverán segun la respuesta del error
 function response_code($code = NULL) {
     if ($code !== NULL) {
         switch ($code) {
@@ -87,6 +88,7 @@ function response_code($code = NULL) {
     return $return = array('code' => $code, 'text' => $text);
 }
 
+///esta función se encarga de pintar el error en el caso de le digamos, en una plantilla,mediante loadView o registrandolo en el log y devolviendo el error
 function showErrorPage($code = 0, $message = "", $http = "", $num_http = 0) {
     switch ($code) {
         case 0:

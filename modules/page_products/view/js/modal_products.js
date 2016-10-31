@@ -1,34 +1,42 @@
 //we do this so that  details_prod don't appear
 $("#details_prod").hide();
 $(document).ready(function() {
+  //actúa cuando clicamos en un producto
   $('.prod').click(function() {
-    var id = this.getAttribute('id');
-    //alert(id);
+    //recogemos el atributo serial number
+    var id = this.getAttribute('serial_number');
+
 
     $.get(
+        //consultamos con el servidor según el serial number recogido
         "modules/page_products/controller/controller_page_products.class.php?idProduct=" +
         id,
         function(data, status) {
+          //recibimoslarespuesta mediante JSON y ya seleccionamos losdatos delproductos que queramos mostrar
           var json = JSON.parse(data);
           var product = json.product;
-          //alert(product.name);
-          //console.log(product);
 
+          //insertaremos en cada etiqueta el valor que queremos del producto
           $("#img_prod").html('<img src="' + product.avatar +
             '" height="75" width="75"> ');
-          $("#name_prod").html(product.name);
-          $("#description_prod").html(
-            "<strong>Description: <br/></strong>" + product.description
+          $("#serial_number").html(
+            "<strong>Serial_number: <br/></strong>" + product.serial_number
           );
-          $("#titration_prod").html("<strong>Titration:</strong>" +
-            product.titration);
-          $("#price_prod").html("Price: " + product.price + " €");
+          $("#country").html("<strong>Country: </strong>" + product.category);
+          $("#trademark").html("<strong>Trademark: </strong>" + product
+            .trademark);
+          $("#model").html("<strong>Model: </strong>" + product.model);
+          $("#description").html("<strong>Description: <br/></strong>" +
+            product.description);
+
+          $("#sale_price").html("Price: " + product.sale_price + " €");
 
           //we do this so that  details_prod  appear
           $("#details_prod").show();
 
 
           $("#product").dialog({
+
             width: 850, //<!-- ------------- ancho de la ventana -->
             height: 500, //<!--  ------------- altura de la ventana -->
             //show: "scale", <!-- ----------- animación de la ventana al aparecer -->
@@ -55,11 +63,13 @@ $(document).ready(function() {
         //if  we already have an error 404
         if (xhr.status === 404) {
           $("#results").load(
-            "modules/products/controller/controller_products.class.php?view_error=false"
+            //En la etiqueta results pintariamos el template de error según el que sea
+            "modules/page_products/controller/controller_page_products.class.php?view_error=false"
           );
         } else {
           $("#results").load(
-            "modules/products/controller/controller_products.class.php?view_error=true"
+            //En la etiqueta results pintariamos el template de error según el que sea
+            "modules/page_products/controller/controller_page_products.class.php?view_error=true"
           );
         }
 

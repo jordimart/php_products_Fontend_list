@@ -667,7 +667,7 @@ function validate_products() {
         },
         "json")
       .fail(function(xhr, textStatus, errorThrown) {
-        console.log(xhr);
+        //console.log(xhr);
         if (xhr.status === 0) {
           alert('Not connect: Verify Network.');
         } else if (xhr.status == 404) {

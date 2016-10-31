@@ -9,6 +9,7 @@
 
             if (!method_exists($modelClass, $function)){
 
+              //Añadida forma para que pinte los errores
               throw new Exception();
             }
 
@@ -18,7 +19,7 @@
                 return $obj->$function($arrArgument);
             }
         } else {
-
+          //Añadida forma para que pinte los errores
             throw new Exception();
         }
     }

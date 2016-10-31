@@ -1,7 +1,7 @@
 <?php
-/*$path = $_SERVER['DOCUMENT_ROOT'] . '/10K PhpProjectMiguel/';
-define('SITE_ROOT', $path);*/
+
+//Define las rutas donde se guardarán los logs
 define('USER_LOG_DIR', SITE_ROOT . 'log/user/Site_User_errors.log');
 define('GENERAL_LOG_DIR', SITE_ROOT . 'log/general/Site_General_errors.log');
-
-define('PRODUCTION', true);
+//define si el modo producción estará activo o no
+define('PRODUCTION', false);

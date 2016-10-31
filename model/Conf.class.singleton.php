@@ -1,7 +1,4 @@
 <?php
-	$path=$_SERVER['DOCUMENT_ROOT'];
-    define('SITE_ROOT', $path);
-    define('MODEL_PATH',SITE_ROOT.'model/');
 
     class Conf {
         private $_userdb;

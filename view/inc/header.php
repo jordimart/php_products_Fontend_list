@@ -28,7 +28,9 @@
     <!-- Circle counter cdn css file -->
     <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>
     <!-- smooth animate css file -->
-    <link rel="stylesheet" href="view/css/animate.css">
+    <!--<link rel="stylesheet" href="view/css/animate.css">-->
+    <!--se actualiza el jquery css, según Toni así funcionaba mejor-->
+    <link href="view/css/animate.min.css" rel="stylesheet">
     <!-- preloader -->
     <!--<link rel="stylesheet" href="view/css/queryLoader.css" type="text/css" />-->
     <!-- gallery slider css -->
@@ -44,17 +46,12 @@
 
 
     <!-- last year libs for datepicker-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+    <!--Se actualizan importaciones para que funcionen los efectos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    <!--<script>
-      $(function() {
-        $( "#date_entry" ).datepicker();
-        $( "#date_exit" ).datepicker();
-      });
 
-    </script>-->
 
 </head>
 
